@@ -16,6 +16,7 @@ trigger Product2Trigger on Product2 (before insert, before update, before delete
         }
         when AFTER_INSERT{
             System.debug('It is after inserting');
+            handler.afterInsert(trigger.new, trigger.newMap);
         }
         when AFTER_UPDATE{
             System.debug('It is after updating');

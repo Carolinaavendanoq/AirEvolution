@@ -1,6 +1,6 @@
 trigger AuxiliaresVueloTrigger on Auxiliares_de_vuelo__c (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
 
-    TriggerHandler handler = new OpportunityLineItemTriggerHandler(Trigger.isExecuting, Trigger.size);
+    TriggerHandler handler = new AuxiliaresVueloTriggerHandler(Trigger.isExecuting, Trigger.size);
 
     switch on trigger.operationType {
         when BEFORE_INSERT {

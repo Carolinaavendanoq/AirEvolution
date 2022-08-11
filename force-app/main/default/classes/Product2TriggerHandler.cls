@@ -23,7 +23,7 @@ public without sharing class Product2TriggerHandler implements TriggerHandler {
     }
 
     public void afterInsert(List<Product2> newProduct2s, Map<ID, SObject> newProduct2Map){
-        
+        apply50Off(newProduct2s);
     }
 
     public void afterUpdate(List<Product2> oldProduct2s, List<Product2> newProduct2s, Map<ID, SObject> oldProduct2Map, Map<ID, SObject> newProduct2Map){
@@ -62,8 +62,20 @@ public without sharing class Product2TriggerHandler implements TriggerHandler {
         }
     }
 
-    public static void flightState(){
 
+    public static void apply50Off(List<Product2> product2New){
+        for (Product2 flight : product2New) {
+            DateTime launchDate = (flight.Fecha_y_hora_de_partida__c).addDays(-1);
+            Integer second = launchDate.second();
+            Integer minute = launchDate.minute();
+            Integer hour = launchDate.hour();
+            Integer dia = launchDate.day();
+            Integer mes = launchDate.month();
+
+            ScTicket50Off s = new ScTicket50Off(flight.Id);
+            String sch = second + ' ' + minute + ' ' + hour + ' ' + dia + ' ' + mes + ' ? *';
+            String jobID = system.schedule(flight.Name, sch, s);
+        }
     }
 
 }

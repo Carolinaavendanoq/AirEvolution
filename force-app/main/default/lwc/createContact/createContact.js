@@ -112,7 +112,7 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
                     variant: 'warning',
                 });
                 this.dispatchEvent(evt);
-                
+                this[NavigationMixin.Navigate]({type: 'standard__recordPage', attributes: {recordId: this.contactId,  actionName: 'view'}});
             }
         }).catch((err) => {
 

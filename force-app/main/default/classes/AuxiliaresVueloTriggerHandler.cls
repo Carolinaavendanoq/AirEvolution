@@ -10,6 +10,7 @@ public without sharing class AuxiliaresVueloTriggerHandler implements TriggerHan
 
     public void beforeInsert(List<Auxiliares_de_vuelo__c> newFlightAttendant){
         // code
+        stopAllocation(newFlightAttendant);
     }
 
     public void beforeUpdate(List<Auxiliares_de_vuelo__c> oldFlightAttendants, List<Auxiliares_de_vuelo__c> newFlightAttendant, Map<ID, SObject> oldFlightAttendantMap, Map<ID, SObject> newFlightAttendantMap){
@@ -38,6 +39,32 @@ public without sharing class AuxiliaresVueloTriggerHandler implements TriggerHan
     }
 
     public void stopAllocation(List<Auxiliares_de_vuelo__c> flightAttendantsNew){
+        Set<Id> flightsId = new set<Id>();
+        for (Auxiliares_de_vuelo__c flightAttendant : flightAttendantsNew) {
+            flightsId.add(flightAttendant.Vuelo__c);
+        }
+
+        AggregateResult[] groupedResults = [SELECT COUNT(Auxiliares_de_vuelo__c), Vuelo__c FROM Auxiliares_de_vuelo__c WHERE Vuelo__c IN: flightsId GROUP BY Vuelo__c];
+
+        List<Product2> flights = [SELECT Id, Avion__r.Auxiliares_de_vuelo_requeridos__c FROM Product2 WHERE Id IN: flightsId];
+
+        for (AggregateResult ar : groupedResults) {
+            for (Product2 flight : flights) {
+                if (ar.get('Vuelo__c') == flight.Id) {
+                    if (ar.get('expr0') == flight.Avion__r.Auxiliares_de_vuelo_requeridos__c) {
+                        for (Auxiliares_de_vuelo__c flightAttendant : flightAttendantsNew) {
+                            if (flightAttendant.Vuelo__c == flight.Id) {
+                                flightAttendant.addError('Asignación de Auxiliares de vuelo completada');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
 
     }
 
