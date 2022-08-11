@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recibe_vuelos_nacionales__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Entiendase como vuelos realizados entre aeropuertos al interior de Colombia</description>
+    <externalId>false</externalId>
+    <label>¿Recibe vuelos nacionales?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

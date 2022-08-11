@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_y_hora_de_prediccion__c</fullName>
+    <description>Día, mes, año y hora en la que se hizo la predicción del clima para un aeropuerto</description>
+    <externalId>false</externalId>
+    <label>Fecha y hora de predicción</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

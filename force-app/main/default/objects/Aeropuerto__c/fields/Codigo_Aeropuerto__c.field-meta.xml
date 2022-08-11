@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Codigo_Aeropuerto__c</fullName>
+    <description>Identificador de código para un aeropuerto</description>
+    <displayFormat>A-{00000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Código de Aeropuerto</label>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

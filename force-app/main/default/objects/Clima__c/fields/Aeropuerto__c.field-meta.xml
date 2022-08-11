@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aeropuerto__c</fullName>
+    <description>El clima es creado  para cada aeropuerto. Si eliminas un aeropuerto eliminas el conjunto de climas relacionados.</description>
+    <externalId>false</externalId>
+    <label>Aeropuerto</label>
+    <referenceTo>Aeropuerto__c</referenceTo>
+    <relationshipLabel>Climas</relationshipLabel>
+    <relationshipName>Climas</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unidad__c</fullName>
+    <description>Escala de medida de la temperatura</description>
+    <externalId>false</externalId>
+    <label>Unidad</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Centigrados</fullName>
+                <default>false</default>
+                <label>Centigrados</label>
+            </value>
+            <value>
+                <fullName>Fahrenheit</fullName>
+                <default>false</default>
+                <label>Fahrenheit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

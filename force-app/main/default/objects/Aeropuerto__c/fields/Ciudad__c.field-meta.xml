@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ciudad__c</fullName>
+    <description>Ciudad en la que se encuentra ubicada el aeropuerto</description>
+    <externalId>false</externalId>
+    <label>Ciudad</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Pais__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Albacete</fullName>
+                <default>false</default>
+                <label>Albacete</label>
+            </value>
+            <value>
+                <fullName>Ámsterdam</fullName>
+                <default>false</default>
+                <label>Ámsterdam</label>
+            </value>
+            <value>
+                <fullName>Antofagasta</fullName>
+                <default>false</default>
+                <label>Antofagasta</label>
+            </value>
+            <value>
+                <fullName>Arica</fullName>
+                <default>false</default>
+                <label>Arica</label>
+            </value>
+            <value>
+                <fullName>Astaná</fullName>
+                <default>false</default>
+                <label>Astaná</label>
+            </value>
+            <value>
+                <fullName>Asunción</fullName>
+                <default>false</default>
+                <label>Asunción</label>
+            </value>
+            <value>
+                <fullName>Atenas</fullName>
+                <default>false</default>
+                <label>Atenas</label>
+            </value>
+            <value>
+                <fullName>Bagram</fullName>
+                <default>false</default>
+                <label>Bagram</label>
+            </value>
+            <value>
+                <fullName>Bahia</fullName>
+                <default>false</default>
+                <label>Bahia</label>
+            </value>
+            <value>
+                <fullName>Balmaceda</fullName>
+                <default>false</default>
+                <label>Balmaceda</label>
+            </value>
+            <value>
+                <fullName>Bamiyán</fullName>
+                <default>false</default>
+                <label>Bamiyán</label>
+            </value>
+            <value>
+                <fullName>Barcelona</fullName>
+                <default>false</default>
+                <label>Barcelona</label>
+            </value>
+            <value>
+                <fullName>Basilea, Mulhouse, Friburgo</fullName>
+                <default>false</default>
+                <label>Basilea, Mulhouse, Friburgo</label>
+            </value>
+            <value>
+                <fullName>Beja</fullName>
+                <default>false</default>
+                <label>Beja</label>
+            </value>
+            <value>
+                <fullName>Berlín</fullName>
+                <default>false</default>
+                <label>Berlín</label>
+            </value>
+            <value>
+                <fullName>Bilbao</fullName>
+                <default>false</default>
+                <label>Bilbao</label>
+            </value>
+            <value>
+                <fullName>Bogotá</fullName>
+                <default>false</default>
+                <label>Bogotá</label>
+            </value>
+            <value>
+                <fullName>Budapest</fullName>
+                <default>false</default>
+                <label>Budapest</label>
+            </value>
+            <value>
+                <fullName>Buenos Aires</fullName>
+                <default>false</default>
+                <label>Buenos Aires</label>
+            </value>
+            <value>
+                <fullName>Burdeos</fullName>
+                <default>false</default>
+                <label>Burdeos</label>
+            </value>
+            <value>
+                <fullName>Cali</fullName>
+                <default>false</default>
+                <label>Cali</label>
+            </value>
+            <value>
+                <fullName>Caracas</fullName>
+                <default>false</default>
+                <label>Caracas</label>
+            </value>
+            <value>
+                <fullName>Casablanca</fullName>
+                <default>false</default>
+                <label>Casablanca</label>
+            </value>
+            <value>
+                <fullName>Castellon</fullName>
+                <default>false</default>
+                <label>Castellon</label>
+            </value>
+            <value>
+                <fullName>Cayo Coco</fullName>
+                <default>false</default>
+                <label>Cayo Coco</label>
+            </value>
+            <value>
+                <fullName>Chicago</fullName>
+                <default>false</default>
+                <label>Chicago</label>
+            </value>
+            <value>
+                <fullName>Chihuahua</fullName>
+                <default>false</default>
+                <label>Chihuahua</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Corrientes</fullName>
+                <default>false</default>
+                <label>Ciudad de Corrientes</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Formosa</fullName>
+                <default>false</default>
+                <label>Ciudad de Formosa</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Guatemala</fullName>
+                <default>false</default>
+                <label>Ciudad de Guatemala</label>
+            </value>
+            <value>
+                <fullName>Ciudad de La Rioja</fullName>
+                <default>false</default>
+                <label>Ciudad de La Rioja</label>
+            </value>
+            <value>
+                <fullName>Ciudad del Este</fullName>
+                <default>false</default>
+                <label>Ciudad del Este</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Macao</fullName>
+                <default>false</default>
+                <label>Ciudad de Macao</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Mendoza</fullName>
+                <default>false</default>
+                <label>Ciudad de Mendoza</label>
+            </value>
+            <value>
+                <fullName>Ciudad de México</fullName>
+                <default>false</default>
+                <label>Ciudad de México</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Panamá</fullName>
+                <default>false</default>
+                <label>Ciudad de Panamá</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Resistencia</fullName>
+                <default>false</default>
+                <label>Ciudad de Resistencia</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Salta</fullName>
+                <default>false</default>
+                <label>Ciudad de Salta</label>
+            </value>
+            <value>
+                <fullName>Ciudad de San Luis</fullName>
+                <default>false</default>
+                <label>Ciudad de San Luis</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Santa Rosa</fullName>
+                <default>false</default>
+                <label>Ciudad de Santa Rosa</label>
+            </value>
+            <value>
+                <fullName>Ciudad de Santiago del Estero</fullName>
+                <default>false</default>
+                <label>Ciudad de Santiago del Estero</label>
+            </value>
+            <value>
+                <fullName>Clorinda</fullName>
+                <default>false</default>
+                <label>Clorinda</label>
+            </value>
+            <value>
+                <fullName>Colonia, Bonn</fullName>
+                <default>false</default>
+                <label>Colonia, Bonn</label>
+            </value>
+            <value>
+                <fullName>Concepción</fullName>
+                <default>false</default>
+                <label>Concepción</label>
+            </value>
+            <value>
+                <fullName>Concordia</fullName>
+                <default>false</default>
+                <label>Concordia</label>
+            </value>
+            <value>
+                <fullName>Córdoba</fullName>
+                <default>false</default>
+                <label>Córdoba</label>
+            </value>
+            <value>
+                <fullName>Cork</fullName>
+                <default>false</default>
+                <label>Cork</label>
+            </value>
+            <value>
+                <fullName>Cuenca</fullName>
+                <default>false</default>
+                <label>Cuenca</label>
+            </value>
+            <value>
+                <fullName>Curitiba</fullName>
+                <default>false</default>
+                <label>Curitiba</label>
+            </value>
+            <value>
+                <fullName>Curuzú Cuatiá</fullName>
+                <default>false</default>
+                <label>Curuzú Cuatiá</label>
+            </value>
+            <value>
+                <fullName>Dayton</fullName>
+                <default>false</default>
+                <label>Dayton</label>
+            </value>
+            <value>
+                <fullName>Doha</fullName>
+                <default>false</default>
+                <label>Doha</label>
+            </value>
+            <value>
+                <fullName>Dubái</fullName>
+                <default>false</default>
+                <label>Dubái</label>
+            </value>
+            <value>
+                <fullName>Eagle-Vail</fullName>
+                <default>false</default>
+                <label>Eagle-Vail</label>
+            </value>
+            <value>
+                <fullName>Edimburgo</fullName>
+                <default>false</default>
+                <label>Edimburgo</label>
+            </value>
+            <value>
+                <fullName>Eindhoven</fullName>
+                <default>false</default>
+                <label>Eindhoven</label>
+            </value>
+            <value>
+                <fullName>El Salvador (Chile)</fullName>
+                <default>false</default>
+                <label>El Salvador (Chile)</label>
+            </value>
+            <value>
+                <fullName>Encarnacion (Paraguay)</fullName>
+                <default>false</default>
+                <label>Encarnacion (Paraguay)</label>
+            </value>
+            <value>
+                <fullName>Estambul</fullName>
+                <default>false</default>
+                <label>Estambul</label>
+            </value>
+            <value>
+                <fullName>Estocolmo</fullName>
+                <default>false</default>
+                <label>Estocolmo</label>
+            </value>
+            <value>
+                <fullName>Estrasburgo</fullName>
+                <default>false</default>
+                <label>Estrasburgo</label>
+            </value>
+            <value>
+                <fullName>Ezeiza</fullName>
+                <default>false</default>
+                <label>Ezeiza</label>
+            </value>
+            <value>
+                <fullName>Faro</fullName>
+                <default>false</default>
+                <label>Faro</label>
+            </value>
+            <value>
+                <fullName>Fayzabad</fullName>
+                <default>false</default>
+                <label>Fayzabad</label>
+            </value>
+            <value>
+                <fullName>Filadelfia</fullName>
+                <default>false</default>
+                <label>Filadelfia</label>
+            </value>
+            <value>
+                <fullName>Florencia</fullName>
+                <default>false</default>
+                <label>Florencia</label>
+            </value>
+            <value>
+                <fullName>Fortaleza</fullName>
+                <default>false</default>
+                <label>Fortaleza</label>
+            </value>
+            <value>
+                <fullName>Fráncfort</fullName>
+                <default>false</default>
+                <label>Fráncfort</label>
+            </value>
+            <value>
+                <fullName>Fráncfort del Meno</fullName>
+                <default>false</default>
+                <label>Fráncfort del Meno</label>
+            </value>
+            <value>
+                <fullName>Funchal</fullName>
+                <default>false</default>
+                <label>Funchal</label>
+            </value>
+            <value>
+                <fullName>General Pico</fullName>
+                <default>false</default>
+                <label>General Pico</label>
+            </value>
+            <value>
+                <fullName>Gibraltar</fullName>
+                <default>false</default>
+                <label>Gibraltar</label>
+            </value>
+            <value>
+                <fullName>Goya</fullName>
+                <default>false</default>
+                <label>Goya</label>
+            </value>
+            <value>
+                <fullName>Granada</fullName>
+                <default>false</default>
+                <label>Granada</label>
+            </value>
+            <value>
+                <fullName>Guadalajara, Jalisco</fullName>
+                <default>false</default>
+                <label>Guadalajara, Jalisco</label>
+            </value>
+            <value>
+                <fullName>Gualeguaychú</fullName>
+                <default>false</default>
+                <label>Gualeguaychú</label>
+            </value>
+            <value>
+                <fullName>Guanacaste</fullName>
+                <default>false</default>
+                <label>Guanacaste</label>
+            </value>
+            <value>
+                <fullName>Guayaquil</fullName>
+                <default>false</default>
+                <label>Guayaquil</label>
+            </value>
+            <value>
+                <fullName>Györ</fullName>
+                <default>false</default>
+                <label>Györ</label>
+            </value>
+            <value>
+                <fullName>Halifax</fullName>
+                <default>false</default>
+                <label>Halifax</label>
+            </value>
+            <value>
+                <fullName>Hamburgo</fullName>
+                <default>false</default>
+                <label>Hamburgo</label>
+            </value>
+            <value>
+                <fullName>Hannover</fullName>
+                <default>false</default>
+                <label>Hannover</label>
+            </value>
+            <value>
+                <fullName>Heligoland</fullName>
+                <default>false</default>
+                <label>Heligoland</label>
+            </value>
+            <value>
+                <fullName>Helsinki</fullName>
+                <default>false</default>
+                <label>Helsinki</label>
+            </value>
+            <value>
+                <fullName>Herat</fullName>
+                <default>false</default>
+                <label>Herat</label>
+            </value>
+            <value>
+                <fullName>Hermosillo</fullName>
+                <default>false</default>
+                <label>Hermosillo</label>
+            </value>
+            <value>
+                <fullName>Holguín</fullName>
+                <default>false</default>
+                <label>Holguín</label>
+            </value>
+            <value>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+                <label>Hong Kong</label>
+            </value>
+            <value>
+                <fullName>Honiara</fullName>
+                <default>false</default>
+                <label>Honiara</label>
+            </value>
+            <value>
+                <fullName>Honolulu</fullName>
+                <default>false</default>
+                <label>Honolulu</label>
+            </value>
+            <value>
+                <fullName>Houston</fullName>
+                <default>false</default>
+                <label>Houston</label>
+            </value>
+            <value>
+                <fullName>Hubballi, Dharwad</fullName>
+                <default>false</default>
+                <label>Hubballi, Dharwad</label>
+            </value>
+            <value>
+                <fullName>Ibiza</fullName>
+                <default>false</default>
+                <label>Ibiza</label>
+            </value>
+            <value>
+                <fullName>Incheon, Seúl</fullName>
+                <default>false</default>
+                <label>Incheon, Seúl</label>
+            </value>
+            <value>
+                <fullName>Inverness</fullName>
+                <default>false</default>
+                <label>Inverness</label>
+            </value>
+            <value>
+                <fullName>Iqaluit</fullName>
+                <default>false</default>
+                <label>Iqaluit</label>
+            </value>
+            <value>
+                <fullName>Iquique</fullName>
+                <default>false</default>
+                <label>Iquique</label>
+            </value>
+            <value>
+                <fullName>Isla de Corvo</fullName>
+                <default>false</default>
+                <label>Isla de Corvo</label>
+            </value>
+            <value>
+                <fullName>Isla de Faial</fullName>
+                <default>false</default>
+                <label>Isla de Faial</label>
+            </value>
+            <value>
+                <fullName>Isla de Flores</fullName>
+                <default>false</default>
+                <label>Isla de Flores</label>
+            </value>
+            <value>
+                <fullName>Isla del Pico</fullName>
+                <default>false</default>
+                <label>Isla del Pico</label>
+            </value>
+            <value>
+                <fullName>Isla de Pascua</fullName>
+                <default>false</default>
+                <label>Isla de Pascua</label>
+            </value>
+            <value>
+                <fullName>Isla de Porto Santo</fullName>
+                <default>false</default>
+                <label>Isla de Porto Santo</label>
+            </value>
+            <value>
+                <fullName>Isla de Santa Maria</fullName>
+                <default>false</default>
+                <label>Isla de Santa Maria</label>
+            </value>
+            <value>
+                <fullName>Isla de São Jorge</fullName>
+                <default>false</default>
+                <label>Isla de São Jorge</label>
+            </value>
+            <value>
+                <fullName>Isla de São Miguel</fullName>
+                <default>false</default>
+                <label>Isla de São Miguel</label>
+            </value>
+            <value>
+                <fullName>Isla Graciosa</fullName>
+                <default>false</default>
+                <label>Isla Graciosa</label>
+            </value>
+            <value>
+                <fullName>Isla Soledad</fullName>
+                <default>false</default>
+                <label>Isla Soledad</label>
+            </value>
+            <value>
+                <fullName>Isla Terceira</fullName>
+                <default>false</default>
+                <label>Isla Terceira</label>
+            </value>
+            <value>
+                <fullName>Ivalo</fullName>
+                <default>false</default>
+                <label>Ivalo</label>
+            </value>
+            <value>
+                <fullName>Jalalabad</fullName>
+                <default>false</default>
+                <label>Jalalabad</label>
+            </value>
+            <value>
+                <fullName>Jerez</fullName>
+                <default>false</default>
+                <label>Jerez</label>
+            </value>
+            <value>
+                <fullName>Jessore (en)</fullName>
+                <default>false</default>
+                <label>Jessore (en)</label>
+            </value>
+            <value>
+                <fullName>Kabul</fullName>
+                <default>false</default>
+                <label>Kabul</label>
+            </value>
+            <value>
+                <fullName>Kaliningrado</fullName>
+                <default>false</default>
+                <label>Kaliningrado</label>
+            </value>
+            <value>
+                <fullName>Kandahar</fullName>
+                <default>false</default>
+                <label>Kandahar</label>
+            </value>
+            <value>
+                <fullName>Kansas City</fullName>
+                <default>false</default>
+                <label>Kansas City</label>
+            </value>
+            <value>
+                <fullName>Kingston</fullName>
+                <default>false</default>
+                <label>Kingston</label>
+            </value>
+            <value>
+                <fullName>La Habana</fullName>
+                <default>false</default>
+                <label>La Habana</label>
+            </value>
+            <value>
+                <fullName>La Seu d&apos;Urgell, Andorra la Vella</fullName>
+                <default>false</default>
+                <label>La Seu d&apos;Urgell, Andorra la Vella</label>
+            </value>
+            <value>
+                <fullName>Lashkar Gah</fullName>
+                <default>false</default>
+                <label>Lashkar Gah</label>
+            </value>
+            <value>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+                <label>Las Vegas</label>
+            </value>
+            <value>
+                <fullName>Lieja</fullName>
+                <default>false</default>
+                <label>Lieja</label>
+            </value>
+            <value>
+                <fullName>Lima</fullName>
+                <default>false</default>
+                <label>Lima</label>
+            </value>
+            <value>
+                <fullName>Lisboa</fullName>
+                <default>false</default>
+                <label>Lisboa</label>
+            </value>
+            <value>
+                <fullName>Londres</fullName>
+                <default>false</default>
+                <label>Londres</label>
+            </value>
+            <value>
+                <fullName>Los Ángeles</fullName>
+                <default>false</default>
+                <label>Los Ángeles</label>
+            </value>
+            <value>
+                <fullName>Luanda</fullName>
+                <default>false</default>
+                <label>Luanda</label>
+            </value>
+            <value>
+                <fullName>Madrid</fullName>
+                <default>false</default>
+                <label>Madrid</label>
+            </value>
+            <value>
+                <fullName>Málaga</fullName>
+                <default>false</default>
+                <label>Málaga</label>
+            </value>
+            <value>
+                <fullName>Malargüe</fullName>
+                <default>false</default>
+                <label>Malargüe</label>
+            </value>
+            <value>
+                <fullName>Maldonado y Punta del Este</fullName>
+                <default>false</default>
+                <label>Maldonado y Punta del Este</label>
+            </value>
+            <value>
+                <fullName>Managua</fullName>
+                <default>false</default>
+                <label>Managua</label>
+            </value>
+            <value>
+                <fullName>Manises</fullName>
+                <default>false</default>
+                <label>Manises</label>
+            </value>
+            <value>
+                <fullName>Manta</fullName>
+                <default>false</default>
+                <label>Manta</label>
+            </value>
+            <value>
+                <fullName>Mar del Plata</fullName>
+                <default>false</default>
+                <label>Mar del Plata</label>
+            </value>
+            <value>
+                <fullName>Marrakech</fullName>
+                <default>false</default>
+                <label>Marrakech</label>
+            </value>
+            <value>
+                <fullName>Mazar-e Sarif</fullName>
+                <default>false</default>
+                <label>Mazar-e Sarif</label>
+            </value>
+            <value>
+                <fullName>Melilla</fullName>
+                <default>false</default>
+                <label>Melilla</label>
+            </value>
+            <value>
+                <fullName>Mercedes</fullName>
+                <default>false</default>
+                <label>Mercedes</label>
+            </value>
+            <value>
+                <fullName>Merlo</fullName>
+                <default>false</default>
+                <label>Merlo</label>
+            </value>
+            <value>
+                <fullName>Miami</fullName>
+                <default>false</default>
+                <label>Miami</label>
+            </value>
+            <value>
+                <fullName>Milán</fullName>
+                <default>false</default>
+                <label>Milán</label>
+            </value>
+            <value>
+                <fullName>Monte Caseros</fullName>
+                <default>false</default>
+                <label>Monte Caseros</label>
+            </value>
+            <value>
+                <fullName>Montenegro</fullName>
+                <default>false</default>
+                <label>Montenegro</label>
+            </value>
+            <value>
+                <fullName>Monterrey</fullName>
+                <default>false</default>
+                <label>Monterrey</label>
+            </value>
+            <value>
+                <fullName>Montevideo</fullName>
+                <default>false</default>
+                <label>Montevideo</label>
+            </value>
+            <value>
+                <fullName>Mont-Joli</fullName>
+                <default>false</default>
+                <label>Mont-Joli</label>
+            </value>
+            <value>
+                <fullName>Montreal</fullName>
+                <default>false</default>
+                <label>Montreal</label>
+            </value>
+            <value>
+                <fullName>Moscú</fullName>
+                <default>false</default>
+                <label>Moscú</label>
+            </value>
+            <value>
+                <fullName>Munich</fullName>
+                <default>false</default>
+                <label>Munich</label>
+            </value>
+            <value>
+                <fullName>Nápoles</fullName>
+                <default>false</default>
+                <label>Nápoles</label>
+            </value>
+            <value>
+                <fullName>Nicosia</fullName>
+                <default>false</default>
+                <label>Nicosia</label>
+            </value>
+            <value>
+                <fullName>Noáin</fullName>
+                <default>false</default>
+                <label>Noáin</label>
+            </value>
+            <value>
+                <fullName>Nueva York</fullName>
+                <default>false</default>
+                <label>Nueva York</label>
+            </value>
+            <value>
+                <fullName>Oporto</fullName>
+                <default>false</default>
+                <label>Oporto</label>
+            </value>
+            <value>
+                <fullName>Oranjestad</fullName>
+                <default>false</default>
+                <label>Oranjestad</label>
+            </value>
+            <value>
+                <fullName>Orlando</fullName>
+                <default>false</default>
+                <label>Orlando</label>
+            </value>
+            <value>
+                <fullName>Ottawa</fullName>
+                <default>false</default>
+                <label>Ottawa</label>
+            </value>
+            <value>
+                <fullName>Paraná</fullName>
+                <default>false</default>
+                <label>Paraná</label>
+            </value>
+            <value>
+                <fullName>París</fullName>
+                <default>false</default>
+                <label>París</label>
+            </value>
+            <value>
+                <fullName>Paso de los Libres</fullName>
+                <default>false</default>
+                <label>Paso de los Libres</label>
+            </value>
+            <value>
+                <fullName>Pedro Juan Caballero (Paraguay)</fullName>
+                <default>false</default>
+                <label>Pedro Juan Caballero (Paraguay)</label>
+            </value>
+            <value>
+                <fullName>Pothia (en)</fullName>
+                <default>false</default>
+                <label>Pothia (en)</label>
+            </value>
+            <value>
+                <fullName>Presidencia Roque Sáenz Peña</fullName>
+                <default>false</default>
+                <label>Presidencia Roque Sáenz Peña</label>
+            </value>
+            <value>
+                <fullName>Puerto Argentino/Stanley</fullName>
+                <default>false</default>
+                <label>Puerto Argentino/Stanley</label>
+            </value>
+            <value>
+                <fullName>Puerto Barrios</fullName>
+                <default>false</default>
+                <label>Puerto Barrios</label>
+            </value>
+            <value>
+                <fullName>Punta Arenas</fullName>
+                <default>false</default>
+                <label>Punta Arenas</label>
+            </value>
+            <value>
+                <fullName>Punta Cana</fullName>
+                <default>false</default>
+                <label>Punta Cana</label>
+            </value>
+            <value>
+                <fullName>Qikiqtarjuaq (en)</fullName>
+                <default>false</default>
+                <label>Qikiqtarjuaq (en)</label>
+            </value>
+            <value>
+                <fullName>Quebec</fullName>
+                <default>false</default>
+                <label>Quebec</label>
+            </value>
+            <value>
+                <fullName>Rancagua</fullName>
+                <default>false</default>
+                <label>Rancagua</label>
+            </value>
+            <value>
+                <fullName>Región de Murcia</fullName>
+                <default>false</default>
+                <label>Región de Murcia</label>
+            </value>
+            <value>
+                <fullName>Reikiavik</fullName>
+                <default>false</default>
+                <label>Reikiavik</label>
+            </value>
+            <value>
+                <fullName>Resolute</fullName>
+                <default>false</default>
+                <label>Resolute</label>
+            </value>
+            <value>
+                <fullName>Reus, Tarragona</fullName>
+                <default>false</default>
+                <label>Reus, Tarragona</label>
+            </value>
+            <value>
+                <fullName>Riad</fullName>
+                <default>false</default>
+                <label>Riad</label>
+            </value>
+            <value>
+                <fullName>Río Grande</fullName>
+                <default>false</default>
+                <label>Río Grande</label>
+            </value>
+            <value>
+                <fullName>Rionegro, Medellín</fullName>
+                <default>false</default>
+                <label>Rionegro, Medellín</label>
+            </value>
+            <value>
+                <fullName>Rodrigues</fullName>
+                <default>false</default>
+                <label>Rodrigues</label>
+            </value>
+            <value>
+                <fullName>Roma</fullName>
+                <default>false</default>
+                <label>Roma</label>
+            </value>
+            <value>
+                <fullName>Rosario</fullName>
+                <default>false</default>
+                <label>Rosario</label>
+            </value>
+            <value>
+                <fullName>Sabadell</fullName>
+                <default>false</default>
+                <label>Sabadell</label>
+            </value>
+            <value>
+                <fullName>Sacramento</fullName>
+                <default>false</default>
+                <label>Sacramento</label>
+            </value>
+            <value>
+                <fullName>Saint Helier</fullName>
+                <default>false</default>
+                <label>Saint Helier</label>
+            </value>
+            <value>
+                <fullName>San Carlos de Bariloche</fullName>
+                <default>false</default>
+                <label>San Carlos de Bariloche</label>
+            </value>
+            <value>
+                <fullName>San Fernando</fullName>
+                <default>false</default>
+                <label>San Fernando</label>
+            </value>
+            <value>
+                <fullName>San Fernando del Valle de Catamarca</fullName>
+                <default>false</default>
+                <label>San Fernando del Valle de Catamarca</label>
+            </value>
+            <value>
+                <fullName>San José</fullName>
+                <default>false</default>
+                <label>San José</label>
+            </value>
+            <value>
+                <fullName>San Pedro Sula</fullName>
+                <default>false</default>
+                <label>San Pedro Sula</label>
+            </value>
+            <value>
+                <fullName>San Rafael</fullName>
+                <default>false</default>
+                <label>San Rafael</label>
+            </value>
+            <value>
+                <fullName>San Ramón de la Nueva Orán</fullName>
+                <default>false</default>
+                <label>San Ramón de la Nueva Orán</label>
+            </value>
+            <value>
+                <fullName>San Salvador</fullName>
+                <default>false</default>
+                <label>San Salvador</label>
+            </value>
+            <value>
+                <fullName>Santa Clara</fullName>
+                <default>false</default>
+                <label>Santa Clara</label>
+            </value>
+            <value>
+                <fullName>Santa Cruz de la Sierra</fullName>
+                <default>false</default>
+                <label>Santa Cruz de la Sierra</label>
+            </value>
+            <value>
+                <fullName>Santa Elena de la Cruz</fullName>
+                <default>false</default>
+                <label>Santa Elena de la Cruz</label>
+            </value>
+            <value>
+                <fullName>Santa Fe</fullName>
+                <default>false</default>
+                <label>Santa Fe</label>
+            </value>
+            <value>
+                <fullName>Santiago de Chile</fullName>
+                <default>false</default>
+                <label>Santiago de Chile</label>
+            </value>
+            <value>
+                <fullName>Santiago de Cuba</fullName>
+                <default>false</default>
+                <label>Santiago de Cuba</label>
+            </value>
+            <value>
+                <fullName>Santo Domingo</fullName>
+                <default>false</default>
+                <label>Santo Domingo</label>
+            </value>
+            <value>
+                <fullName>Sao Paulo</fullName>
+                <default>false</default>
+                <label>Sao Paulo</label>
+            </value>
+            <value>
+                <fullName>São Paulo</fullName>
+                <default>false</default>
+                <label>São Paulo</label>
+            </value>
+            <value>
+                <fullName>Sevilla</fullName>
+                <default>false</default>
+                <label>Sevilla</label>
+            </value>
+            <value>
+                <fullName>Sibiu</fullName>
+                <default>false</default>
+                <label>Sibiu</label>
+            </value>
+            <value>
+                <fullName>Sídney</fullName>
+                <default>false</default>
+                <label>Sídney</label>
+            </value>
+            <value>
+                <fullName>Singapur</fullName>
+                <default>false</default>
+                <label>Singapur</label>
+            </value>
+            <value>
+                <fullName>Tababela</fullName>
+                <default>false</default>
+                <label>Tababela</label>
+            </value>
+            <value>
+                <fullName>Taipéi</fullName>
+                <default>false</default>
+                <label>Taipéi</label>
+            </value>
+            <value>
+                <fullName>Tartagal</fullName>
+                <default>false</default>
+                <label>Tartagal</label>
+            </value>
+            <value>
+                <fullName>Tegucigalpa</fullName>
+                <default>false</default>
+                <label>Tegucigalpa</label>
+            </value>
+            <value>
+                <fullName>Tel Aviv</fullName>
+                <default>false</default>
+                <label>Tel Aviv</label>
+            </value>
+            <value>
+                <fullName>Tenerife</fullName>
+                <default>false</default>
+                <label>Tenerife</label>
+            </value>
+            <value>
+                <fullName>Termas de Río Hondo</fullName>
+                <default>false</default>
+                <label>Termas de Río Hondo</label>
+            </value>
+            <value>
+                <fullName>Tesalónica</fullName>
+                <default>false</default>
+                <label>Tesalónica</label>
+            </value>
+            <value>
+                <fullName>Tokio</fullName>
+                <default>false</default>
+                <label>Tokio</label>
+            </value>
+            <value>
+                <fullName>Toronto</fullName>
+                <default>false</default>
+                <label>Toronto</label>
+            </value>
+            <value>
+                <fullName>Toulouse</fullName>
+                <default>false</default>
+                <label>Toulouse</label>
+            </value>
+            <value>
+                <fullName>Trieste</fullName>
+                <default>false</default>
+                <label>Trieste</label>
+            </value>
+            <value>
+                <fullName>Turku</fullName>
+                <default>false</default>
+                <label>Turku</label>
+            </value>
+            <value>
+                <fullName>Ushuaia</fullName>
+                <default>false</default>
+                <label>Ushuaia</label>
+            </value>
+            <value>
+                <fullName>Valladolid</fullName>
+                <default>false</default>
+                <label>Valladolid</label>
+            </value>
+            <value>
+                <fullName>Vancouver</fullName>
+                <default>false</default>
+                <label>Vancouver</label>
+            </value>
+            <value>
+                <fullName>Viena</fullName>
+                <default>false</default>
+                <label>Viena</label>
+            </value>
+            <value>
+                <fullName>Vigo</fullName>
+                <default>false</default>
+                <label>Vigo</label>
+            </value>
+            <value>
+                <fullName>Villa Mercedes</fullName>
+                <default>false</default>
+                <label>Villa Mercedes</label>
+            </value>
+            <value>
+                <fullName>Wellington</fullName>
+                <default>false</default>
+                <label>Wellington</label>
+            </value>
+            <value>
+                <fullName>Winnipeg</fullName>
+                <default>false</default>
+                <label>Winnipeg</label>
+            </value>
+            <value>
+                <fullName>Yerba</fullName>
+                <default>false</default>
+                <label>Yerba</label>
+            </value>
+            <value>
+                <fullName>Zagreb</fullName>
+                <default>false</default>
+                <label>Zagreb</label>
+            </value>
+            <value>
+                <fullName>Zaragoza</fullName>
+                <default>false</default>
+                <label>Zaragoza</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Bélgica</controllingFieldValue>
+            <valueName>Lieja</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bolivia</controllingFieldValue>
+            <valueName>Santa Cruz de la Sierra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brasil</controllingFieldValue>
+            <valueName>Bahia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brasil</controllingFieldValue>
+            <valueName>Curitiba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brasil</controllingFieldValue>
+            <valueName>Fortaleza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brasil</controllingFieldValue>
+            <valueName>Sao Paulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brasil</controllingFieldValue>
+            <valueName>São Paulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Halifax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Iqaluit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Mont-Joli</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Montreal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Ottawa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Qikiqtarjuaq (en)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Quebec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Resolute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Toronto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Vancouver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canadá</controllingFieldValue>
+            <valueName>Winnipeg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Catar</controllingFieldValue>
+            <valueName>Doha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Antofagasta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Arica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Concepción</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>El Salvador (Chile)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Iquique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Isla de Pascua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Punta Arenas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Rancagua</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chile</controllingFieldValue>
+            <valueName>Santiago de Chile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>Ciudad de Macao</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>Hong Kong</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afganistán</controllingFieldValue>
+            <valueName>Fayzabad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afganistán</controllingFieldValue>
+            <valueName>Herat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afganistán</controllingFieldValue>
+            <valueName>Jalalabad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afganistán</controllingFieldValue>
+            <valueName>Kabul</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afganistán</controllingFieldValue>
+            <valueName>Kandahar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Afganistán</controllingFieldValue>
+            <valueName>Mazar-e Sarif</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Berlín</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Colonia, Bonn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Fráncfort</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Fráncfort del Meno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Hamburgo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Heligoland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alemania</controllingFieldValue>
+            <valueName>Munich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Angola</controllingFieldValue>
+            <valueName>Luanda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Arabia Saudita</controllingFieldValue>
+            <valueName>Riad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Buenos Aires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Corrientes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Formosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de La Rioja</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Mendoza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Resistencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Salta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de San Luis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Santa Rosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ciudad de Santiago del Estero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Clorinda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Concordia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Córdoba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Curuzú Cuatiá</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ezeiza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>General Pico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Goya</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Gualeguaychú</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Malargüe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Mar del Plata</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Mercedes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Merlo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Monte Caseros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Paraná</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Paso de los Libres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Presidencia Roque Sáenz Peña</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Reus, Tarragona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Río Grande</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Rosario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>San Fernando</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>San Fernando del Valle de Catamarca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>San Rafael</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>San Ramón de la Nueva Orán</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Santa Fe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Tartagal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Termas de Río Hondo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Ushuaia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Argentina</controllingFieldValue>
+            <valueName>Villa Mercedes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Kingston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Australia</controllingFieldValue>
+            <valueName>Sídney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <valueName>Viena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bangladés</controllingFieldValue>
+            <valueName>Jessore (en)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
