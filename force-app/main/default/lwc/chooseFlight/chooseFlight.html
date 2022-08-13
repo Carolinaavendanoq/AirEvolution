@@ -1,7 +1,13 @@
 <!-- sldsValidatorIgnore -->
 <template>
     <lightning-card title="Vuelos" icon-name="custom:custom20">
-            <lightning-datatable key-field="Id" data={flights.data} columns = {columns} hide-checkbox-column
+        <div class="slds-align_absolute-center">
+            <template for:each={alphabet} for:item="letter">
+                &nbsp;<a onclick={handleFilterChange} key={letter} data-filter ={letter}>{letter}</a>&nbsp;|
+            </template>
+            <a onclick={handleFilterChange} data-filter="">Todo</a>
+        </div>
+        <lightning-datatable key-field="Id" data={data} columns = {columns} hide-checkbox-column
             onrowaction={handleRowAction} ></lightning-datatable>
     </lightning-card>
     <template if:true={isModalOpen}>

@@ -23,11 +23,11 @@ public without sharing class Product2TriggerHandler implements TriggerHandler {
     }
 
     public void afterInsert(List<Product2> newProduct2s, Map<ID, SObject> newProduct2Map){
-        apply50Off(newProduct2s);
+
     }
 
     public void afterUpdate(List<Product2> oldProduct2s, List<Product2> newProduct2s, Map<ID, SObject> oldProduct2Map, Map<ID, SObject> newProduct2Map){
-        
+
     }
 
     public void afterDelete(List<Product2> oldProduct2s, Map<ID, SObject> oldProduct2Map){
@@ -71,10 +71,27 @@ public without sharing class Product2TriggerHandler implements TriggerHandler {
             Integer hour = launchDate.hour();
             Integer dia = launchDate.day();
             Integer mes = launchDate.month();
+            String customName = 'Discount to ' + flight.Name;
 
             ScTicket50Off s = new ScTicket50Off(flight.Id);
             String sch = second + ' ' + minute + ' ' + hour + ' ' + dia + ' ' + mes + ' ? *';
-            String jobID = system.schedule(flight.Name, sch, s);
+            String jobID = system.schedule(customName, sch, s);
+        }
+    }
+
+    public static void assignCrewMembers(List<Product2> product2New){
+        for (Product2 flight : product2New) {
+            DateTime launchDate = (flight.Fecha_y_hora_de_partida__c).addDays(-7);
+            Integer second = launchDate.second();
+            Integer minute = launchDate.minute();
+            Integer hour = launchDate.hour();
+            Integer dia = launchDate.day();
+            Integer mes = launchDate.month();
+            String customName = 'Notification to ' + flight.Name;
+
+            ScAssignFlightAttendants s = new ScAssignFlightAttendants(flight.Id);
+            String sch = second + ' ' + minute + ' ' + hour + ' ' + dia + ' ' + mes + ' ? *';
+            String jobID = system.schedule(customName, sch, s);
         }
     }
 

@@ -135,6 +135,7 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
         updateBooking({idReserve: this.id, idPricebook2: this.pricebookId})
         .then((result) => {
             this.isModalOpen = true;
+            this.reservationCreated = false;
         }).catch((err) => {
 
         });
@@ -161,6 +162,7 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     closeModal() {
         // to close modal set isModalOpen tarck value as false
         this.isModalOpen = false;
+        this.reservationCreated = true;
     }
 
 
@@ -177,5 +179,7 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
 
         });
     }
+
+
 
 }

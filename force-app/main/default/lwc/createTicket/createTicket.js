@@ -11,7 +11,7 @@ import ALLOWEDLUGGAGE_FIELD from '@salesforce/schema/OpportunityLineItem.Equipaj
 import ADDITIONALLUGGAGE_FIELD from '@salesforce/schema/OpportunityLineItem.Equipaje_de_bodega_adicional__c';
 
 
-export default class CreateTicket extends LightningElement {
+export default class CreateTicket extends LightningElement{
     objectApiName = OPPORTUNITYLINEITEM_OBJECT;
     fields = [PASSENGER_FIELD, BOARDINGATE_FIELD , ALLOWEDLUGGAGE_FIELD, ADDITIONALLUGGAGE_FIELD];
 

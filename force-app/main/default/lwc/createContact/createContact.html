@@ -15,7 +15,7 @@
         </lightning-card>
     </template>
     <template if:true={reservationCreated}>
-        <lightning-card title="Reserva creada" icon-name="Standard:form">
+        <lightning-card title="Reserva creada" icon-name="standard:form">
             <div class="slds-var-m-top_medium">
                 <lightning-record-view-form object-api-name="Opportunity" record-id={reserveId}>
                     <lightning-output-field field-name="Titular_de_reserva__c"></lightning-output-field>
@@ -26,7 +26,7 @@
                 </lightning-record-view-form>
             </div>
         </lightning-card>
-        <lightning-card title="Elegir lista de precios" icon-name="custom:custom55">
+        <lightning-card title="Elegir categoría" icon-name="custom:custom55">
             <lightning-datatable key-field="Id" data={pricebooks.data} columns={columns} hide-checkbox-column onrowaction={handleRowAction}></lightning-datatable>
         </lightning-card>
     </template> 

@@ -1,5 +1,4 @@
 import { LightningElement, wire, api } from 'lwc';
-
 import getFlights from '@salesforce/apex/obtainFlights.getFlights';
 
 const actions = [
@@ -19,21 +18,59 @@ const COLUMNS = [
     {type: 'action', typeAttributes: {rowActions: actions}},
 ];
 
-export default class ChooseFlight extends LightningElement {
+export default class ChooseFlight extends LightningElement{
+    data = [];
     columns = COLUMNS;
     id;
     isModalOpen;
-    
+    alphabet;
+    currentLetter;
+    filteredResults = [];
+    country = [];
    
-
     @api reservationId;
     @api pricebook2Id;
 
     @wire(getFlights,{pricebookId: '$pricebook2Id'})
-    flights;
+    flights(result){
+        if (result.data) {
+            console.log('Entro al if');
+            this.data = result.data;
+            for (let i = 0; i < this.data.length; i++) {
+                this.country.push(this.data[i].destinationCountry);
+                console.log('pais ' + this.country);
+            }
+        }else if(result.error){
+            console.log('Entro al error');
+            this.error = result.error;
+        }
+    };
+
 
     get fId(){
         return this.id;
+    }
+
+    connectedCallback(){
+        this.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        this.handleFilterChange();
+    }
+
+    
+    handleFilterChange(event){
+        if(event){
+            this.currentLetter = event.target.dataset.filter;
+            console.log('letra ' + this.currentLetter);
+        }
+        if(this.currentLetter){
+            this.filteredResults = this.data.filter((country) => country.startsWith(this.currentLetter));
+            console.log('letra ' + this.currentLetter);
+            console.log('array ' + this.filteredResults);
+        }else{
+            this.filteredResults = [...this.data];
+            console.log('array ' + this.filteredResults);
+        }
+        this.filteredResults.sort((a,b) => a<b ? -1:1);
     }
 
     handleRowAction(event){
@@ -50,12 +87,11 @@ export default class ChooseFlight extends LightningElement {
     closeModal() {
         // to close modal set isModalOpen tarck value as false
         this.isModalOpen = false;
+        console.log('datos ' + this.data);
     }
 
     submitDetails(){
         this.isModalOpen = false;
         this.dispatchEvent(new CustomEvent('select'));
     }
-
-
 }
