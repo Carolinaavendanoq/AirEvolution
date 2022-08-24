@@ -1,7 +1,8 @@
 <template>
-    <lightning-record-edit-form object-api-name="Product2" record-id={flightId} onsubmit={confirmHandle}>
+    <lightning-record-edit-form object-api-name="Product2" record-id={flightId}  onsuccess={handleSuccess} onchange={handleChange}>
         <lightning-input-field field-name={pilot}></lightning-input-field>
         <lightning-input-field field-name={copilot}></lightning-input-field>
+        <lightning-dual-listbox name="Auxiliares" label="Auxiliares de vuelo" source-label="Disponibles" selected-label="Seleccionados" options={options} value={values}></lightning-dual-listbox>
         <div class="slds-var-m-top_medium">
             <lightning-button variant="brand" type="submit" label="Actualizar"></lightning-button>
         </div>

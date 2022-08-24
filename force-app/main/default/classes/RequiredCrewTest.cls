@@ -69,20 +69,29 @@ public with sharing class RequiredCrewTest {
 
     @isTest
     static void flightAttendantSaved(){
-        List<Contact> flightAttendants = new List<Contact>();
-        for (Integer i = 0; i < 20; i++) {
-            flightAttendants.add(new Contact(FirstName = 'Flight', LastName = 'Attendant' + i , Tipo_de_identificacion__c = 'Cédula de Ciudadanía', Numero_de_identificacion__c = '364363' + i, RecordTypeId = '0128a000000N3efAAC'));
-        }
-        insert flightAttendants;
+        Product2 flights = [SELECT Id FROM Product2 LIMIT 1];
 
-        List<Product2> flights = [SELECT Id FROM Product2 LIMIT 1];
-        String flightId;
-        
-        for (Product2 flight : flights) {
-            flightId = (String)flight.Id;
+        List<Contact> flightAttendants = [SELECT Id FROM Contact];
+        List<String> ids = new List<String>();
+        for (Contact attendant : flightAttendants) {
+            ids.add(attendant.Id);
         }
 
+        RequiredCrew.saveFlightAttendants(ids, flights.Id);
 
+        List<RequiredCrew.Option> results = RequiredCrew.getFlightAttendants(flights.Id);
+        System.assertEquals(4, results.size());
 
+    }
+
+    @isTest
+    static void obtainFlighError(){
+        Avion__c plane = [SELECT Id FROM Avion__c LIMIT 1];
+        delete plane;
+        try {
+            List<RequiredCrew.Flight> flights = RequiredCrew.obtainFlights();
+        } catch (Exception e) {
+            System.assert(e.getMessage().contains('exception'));
+        } 
     }
 }

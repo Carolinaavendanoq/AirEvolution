@@ -4,32 +4,34 @@ trigger Product2Trigger on Product2 (before insert, before update, before delete
 
     switch on trigger.operationType {
         when BEFORE_INSERT {
-            System.debug('It is before inserting');
+            System.debug('Está antes de insertar');
             handler.beforeInsert(trigger.new);
         }
         when BEFORE_UPDATE{
-            System.debug('It is before updating');
+            System.debug('Está antes de actualizar');
             handler.beforeUpdate(trigger.old, trigger.new, trigger.oldMap, trigger.newMap);
         }
         when BEFORE_DELETE {
-            System.debug('It is before deleting');
+            System.debug('Está antes de eliminar');
+            handler.beforeDelete(trigger.old, trigger.oldMap);
         }
         when AFTER_INSERT{
-            System.debug('It is after inserting');
-            // handler.afterInsert(trigger.new, trigger.newMap);
+            System.debug('Está después de insertar');
+            handler.afterInsert(trigger.new, trigger.newMap);
         }
         when AFTER_UPDATE{
-            System.debug('It is after updating');
-            // handler.afterUpdate(trigger.old, trigger.new, trigger.oldMap, trigger.newMap);
+            System.debug('Está después de actualizar');
+            handler.afterUpdate(trigger.old, trigger.new, trigger.oldMap, trigger.newMap);
         }
         when AFTER_DELETE{
-            System.debug('It is after deleting');
+            System.debug('Está después de eliminar');
+            handler.afterDelete(trigger.old, trigger.oldMap);
         }
         when AFTER_UNDELETE{
-            System.debug('It is after undeleting');
+            System.debug('Está después de recuperar');
         }
         when else {
-            System.debug('No event');
+            System.debug('Ningún evento');
         }
     }
 }

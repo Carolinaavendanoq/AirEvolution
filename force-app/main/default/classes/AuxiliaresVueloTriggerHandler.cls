@@ -61,11 +61,6 @@ public without sharing class AuxiliaresVueloTriggerHandler implements TriggerHan
                 }
             }
         }
-
-
-
-
-
     }
 
 }

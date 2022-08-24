@@ -3,7 +3,7 @@ trigger OpportunityLineItemTrigger on OpportunityLineItem (before insert, before
 
     TriggerHandler handler = new OpportunityLineItemTriggerHandler(Trigger.isExecuting, Trigger.size);
 
-    switch on trigger.operationType {
+     switch on trigger.operationType {
         when BEFORE_INSERT {
             System.debug('Está antes de insertar');
             handler.beforeInsert(trigger.new);
@@ -14,16 +14,19 @@ trigger OpportunityLineItemTrigger on OpportunityLineItem (before insert, before
         }
         when BEFORE_DELETE {
             System.debug('Está antes de eliminar');
+            handler.beforeDelete(trigger.old, trigger.oldMap);
         }
         when AFTER_INSERT{
             System.debug('Está después de insertar');
-            
+            handler.afterInsert(trigger.new, trigger.newMap);
         }
         when AFTER_UPDATE{
             System.debug('Está después de actualizar');
+            handler.afterUpdate(trigger.old, trigger.new, trigger.oldMap, trigger.newMap);
         }
         when AFTER_DELETE{
             System.debug('Está después de eliminar');
+            handler.afterDelete(trigger.old, trigger.oldMap);
         }
         when AFTER_UNDELETE{
             System.debug('Está después de recuperar');

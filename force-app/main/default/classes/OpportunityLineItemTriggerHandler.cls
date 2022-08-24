@@ -191,8 +191,8 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
         }
     }
 
-    public static void ticketEvent(List<OpportunityLineItem> opportunityLineItemsNeW){
+    /* public static void ticketEvent(List<OpportunityLineItem> opportunityLineItemsNeW){
         // añadir tiquetes al calendario
-    }
+    }*/
 
 }

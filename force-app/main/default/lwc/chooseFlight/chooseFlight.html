@@ -7,7 +7,7 @@
             </template>
             <a onclick={handleFilterChange} data-filter="">Todo</a>
         </div>
-        <lightning-datatable key-field="Id" data={data} columns = {columns} hide-checkbox-column
+        <lightning-datatable key-field="Id" data={currentPage} columns ={columns} hide-checkbox-column
             onrowaction={handleRowAction} ></lightning-datatable>
     </lightning-card>
     <template if:true={isModalOpen}>
