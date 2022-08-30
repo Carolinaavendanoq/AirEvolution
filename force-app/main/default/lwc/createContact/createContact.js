@@ -46,6 +46,7 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     isModalOpen = false;
     finalBookingId;
 
+ /* Un servicio de cable que está llamando al método obtainPricebooks. */
     @wire(obtainPricebooks)
     pricebooks;
 
@@ -53,6 +54,10 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     fields = [FIRSTNAME_FIELD, LASTNAME_FIELD,PASSPORTNUMBER_FIELD, NATIONALITY_FIELD,BIRTHDATE_FIELD, EMAIL_FIELD, ADDRESS_FIELD,CELLPHONENUMBER_FIELD, HOMEPHONE_FIELD];
 
 
+    /**
+     * La función devuelve una lista de opciones, cada opción tiene una etiqueta y una propiedad de
+     * valor
+     */
     get options(){
         return[{
             label: 'Cédula de ciudadanía', value: 'Cédula de ciudadanía'
@@ -61,14 +66,24 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
         }, {label: 'Tarjeta de identidad', value: 'Tarjeta de identidad'}]
     }
 
+/**
+ * Devuelve el valor de la propiedad id.
+ */
     get reserveId(){
         return this.id;
     }
 
+/**
+ * La función devuelve el valor de la propiedad 'pricebookId'
+ */
     get id2Pricebook(){
         return this.pricebookId;
     }
 
+/**
+ * La función toma un evento y, según el nombre del evento, establecerá el valor de typeId o
+ * IdentityNumber.
+ */
     handleChange(event){
         switch (event.target.name) {
             case 'typeId':
@@ -81,6 +96,14 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
         }
     }
 
+/**
+ * La función se llama cuando el usuario hace clic en el botón buscar. Llama a la función
+ * checkContact, que retorna un contacto. La propiedad contacto recibe el
+ * resultado, el error se establece en indefinido, a contactId se le establece el Id. del
+ * contacto, la variable showCreateContact se establece en falso y se llama a la función
+ * createReservation. Si hay un error, el contacto se establece en indefinido, el error se
+ * establece en el error, la variable showCreateContact se establece en verdadero
+ */
     searchContact(event){
         checkContact({idType: this.value, idNumber: this.identityNumber})
         .then((result) => {
@@ -98,6 +121,9 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     }
 
 
+/**
+ * La función crea una reserva para un contacto.
+ */
     createReservation(event){
         checkReservation({idContact: this.contactId})
         .then((result) => {
@@ -112,6 +138,7 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
                     variant: 'warning',
                 });
                 this.dispatchEvent(evt);
+                // Redirige a la página de contacto del cliente que ya tiene reserva
                 this[NavigationMixin.Navigate]({type: 'standard__recordPage', attributes: {recordId: this.contactId,  actionName: 'view'}});
             }
         }).catch((err) => {
@@ -119,6 +146,10 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
         });
     }
 
+ /**
+  * La función se llama cuando un usuario hace clic en una acción de la tabla. Luego, la función llama a
+  * la función bookingUpdated()
+  */
     handleRowAction(event){
         const action = event.detail.action;
         const row = event.detail.row;
@@ -131,6 +162,10 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
 
     }
 
+/**
+ * La función se llama cuando el usuario hace clic en la acción "asignar a reserva". Llama al
+ * controlador de Apex para actualizar la reserva
+ */
     bookingUpdated(event){
         updateBooking({idReserve: this.id, idPricebook2: this.pricebookId})
         .then((result) => {
@@ -142,6 +177,12 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     }
 
 
+/**
+ * La función se llama cuando el usuario hace clic en el botón Enviar. Impide la acción predeterminada
+ * del botón de envío, que es enviar el formulario. Luego asigna el value de la opción seleccionada al
+ * campo Tipo_de_Identificacion__c y el valor la propiedad identityNumber al campo
+ * Numero_de_identificacion__c. Finalmente, envía el formulario
+ */
     handleSubmit(event){
         event.preventDefault();
         const fields = event.detail.fields;
@@ -150,6 +191,9 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
         this.template.querySelector("lightning-record-form").submit(fields);
     }
 
+/**
+ * Crea un mensaje de Toast cuando el usuario hace clic en el botón Guardar.
+ */
     confirmHandle(event){
         const toastEvent = new ShowToastEvent({
             title: 'Contacto creado',
@@ -159,6 +203,9 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     }
 
 
+/**
+ * La función closeModal() establece el valor de isModalOpen en falso, lo que cierra el modal
+ */
     closeModal() {
         // to close modal set isModalOpen tarck value as false
         this.isModalOpen = false;
@@ -166,6 +213,12 @@ export default class CreateContact extends NavigationMixin (LightningElement) {
     }
 
 
+ /**
+  * La función se llama cuando el usuario hace clic en el botón "Finalizar" en el modal. Llama al
+  * método de Apex finalBooking() y pasa el id de reserva. El método de Apex
+  * devuelve el id del registro de reserva final. La función luego navega a la página de
+  * registro de reserva final
+  */
     handleSelect(){
         finalBooking({idReserve: this.id})
         .then((result) => {

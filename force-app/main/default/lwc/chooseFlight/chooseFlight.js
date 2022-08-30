@@ -31,6 +31,10 @@ export default class ChooseFlight extends LightningElement{
     @api reservationId;
     @api pricebook2Id;
 
+/**
+ * Se llama a la función cuando se cambia la propiedad pricebook2Id. Llama al adaptador de cable
+ * getFlights, que devuelve una lista de vuelos.
+ */
     @wire(getFlights,{pricebookId: '$pricebook2Id'}) 
     flights({data, error}){
         if (data) {
@@ -43,15 +47,27 @@ export default class ChooseFlight extends LightningElement{
         }
     }
 
+    /**
+     * Se llama a la función connectedCallback() cuando el elemento se inserta en el DOM
+     */
     connectedCallback() {
         this.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
         this.handleFilterChange();
     }
 
+    /**
+     * La función devuelve la página actual con el filtrado.
+     */
     get currentPage() {
         return this.filtered;
     }
     
+/**
+ * Si el evento no es nulo, establezca currentLetter en la letra en la que se hizo clic. Si
+ * currentLetter no es nulo, filtre los resultados para mostrar solo los países que comienzan con
+ * currentLetter. Si currentLetter es nulo, establezca los resultados filtrados en los resultados
+ * filtrados originales
+ */
     handleFilterChange(event) {
         if(event) {
             this.currentLetter = event.target.dataset.filter;
@@ -66,10 +82,18 @@ export default class ChooseFlight extends LightningElement{
         // this.filtered.sort((a,b) => a<b ? -1:1);
     }
 
+/**
+ * Devuelve el valor de la propiedad id.
+ */
     get fId(){
         return this.id;
     }
 
+/**
+ * La función se llama cuando un usuario hace clic en una acción en el datatable. Luego, la función
+ * establece la identificación del vuelo  en el que se hizo clic en la propiedad id y
+ * abre el modal
+ */
     handleRowAction(event){
         const action = event.detail.action;
         const row = event.detail.row;
@@ -81,11 +105,18 @@ export default class ChooseFlight extends LightningElement{
         }
     }
 
+/**
+ * La función closeModal() establece la propiedad isModalOpen en falso
+ */
     closeModal() {
         // to close modal set isModalOpen tarck value as false
         this.isModalOpen = false;
     }
 
+/**
+ * La función 'submitDetails()' se llama cuando el usuario hace clic en el botón 'Enviar' en el modal.
+ * Cierra el modal y envía un evento 'select'
+ */
     submitDetails(){
         this.isModalOpen = false;
         this.dispatchEvent(new CustomEvent('select'));
