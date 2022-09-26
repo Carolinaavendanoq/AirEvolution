@@ -1,0 +1,36 @@
+<apex:page standardController="Opportunity" extensions="ShowTickets" renderAs="pdf">
+    <apex:pageBlock >
+    	<apex:image value="{!$Resource.logoAirEvolution}" width="100" height="100"/> <h1 style="color: #af0c0c">Air-Evolution</h1>
+    	<h2>Información de la reserva</h2>
+        <apex:pageBlockSection >
+            Titular de la reserva: {!Opportunity.Titular_de_reserva__r.Name} <br/>
+            Documento: {!Opportunity.Titular_de_reserva__r.Tipo_de_Identificacion__c} {!Opportunity.Titular_de_reserva__r.Numero_de_identificacion__c}<br/>
+        	Nombre reserva: {! Opportunity.Name } <br/>
+            Fecha de pago: {!Opportunity.closeDate} <br/>
+            Valor total: {!Opportunity.Valor_total__c} <br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock >
+    	<h2>Información de los tiquetes</h2>
+        <apex:pageBlockTable value="{! paidTickets}" var="tiq" cellpadding="3px" style="font-size: 13px; align: center; border: 2px solid" width="100%">
+            <apex:column style="border: 0.5px solid" value="{!tiq.pasajero__r.Name}"/>
+            <apex:column style="border: 0.5px solid" value="{!tiq.Asiento__c}"/>
+        	<apex:column style="border: 0.5px solid" value="{!tiq.Equipaje_permitido__c}"/>
+            <apex:column style="border: 0.5px solid" value="{!tiq.UnitPrice}"/>
+            <apex:column style="border: 0.5px solid" value="{!tiq.Product2.Name}"/>
+            <apex:column style="border: 0.5px solid" headerValue="Aeropuerto de partida" value="{!tiq.Product2.Aeropuerto_de_partida__r.Name}"/>
+            <apex:column style="border: 0.5px solid" headerValue="Fecha/hora de partida" value="{!tiq.Product2.Fecha_y_hora_de_partida__c}"/>
+            <apex:column style="border: 0.5px solid" headerValue="Aeropuerto de destino" value="{!tiq.Product2.Aeropuerto_de_llegada__r.Name}"/>
+            <apex:column style="border: 0.5px solid" headerValue="Fecha/hora de llegada" value="{!tiq.Product2.Fecha_y_hora_estimada_de_llegada__c}"/>
+            <apex:column style="border: 0.5px solid" headerValue="Duración">{!ROUND((tiq.Product2.Fecha_y_hora_estimada_de_llegada__c - tiq.Product2.Fecha_y_hora_de_partida__c) * 24, 2)}</apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock >
+        <h3>Terminos y condiciones</h3>
+        <p>El transporte de Pasajeros y equipaje prestado por Aerovías del Continente Americano S.A. Air-Evolution; Taca International Airlines, S.A.; Avianca Costa Rica S.A.; Avianca Ecuador S.A. y Regional Express Américas S.A.S.
+            se encuentra sujeto a los siguientes términos y condiciones, en adición a los términos y condiciones impresas en cualquier tiquete o tiquete electrónico. Al comprar un boleto o aceptar el transporte, el Pasajero acepta estas disposiciones.</p>
+        <div style="background-color: #af0c0c;">
+            .
+        </div>
+    </apex:pageBlock>
+</apex:page>

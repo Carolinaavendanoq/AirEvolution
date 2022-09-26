@@ -1,0 +1,45 @@
+<apex:page controller="ShowTickets" renderAs="PDF">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:image value="{! $Resource.logoAirEvolution}" width="100" height="100"/>
+            <h1 style="color: #af0c0c">Air-Evolution</h1>
+            <h2>Información de tiquete(s)</h2>
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{! ResultsForPdf}" var="ticket" cellpadding="3px" style="font-size: 13px; align: center; border: 2px solid" width="100%">
+                	<apex:column value="{! ticket.Pasajero__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Asiento__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Categoria__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Equipaje_permitido__c  }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Puerta_de_embarque__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.TotalPrice  }" style="border: 0.5px solid"></apex:column>
+    				</apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <h2>Información de reserva(s)</h2>
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{! ResultsForPdf}" var="ticket" cellpadding="3px" style="font-size: 13px; align: center; border: 2px solid" width="100%">
+                	<apex:column value="{! ticket.Opportunity.Name }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Opportunity.stageName }" style="border: 0.5px solid"></apex:column>
+    			</apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <h2>Información vuelo(s)</h2>
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{! ResultsForPdf}" var="ticket" cellpadding="3px" style="font-size: 13px; align: center; border: 2px solid" width="100%">
+                	<apex:column value="{! ticket.Product2.Name }" style="border: 0.5px solid"></apex:column>
+                    <apex:column value="{! ticket.Product2.Aeropuerto_de_partida__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Product2.Aeropuerto_de_llegada__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Product2.Avion__c  }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Product2.Fecha_y_hora_de_partida__c }" style="border: 0.5px solid"></apex:column>
+                	<apex:column value="{! ticket.Product2.Estado__c  }" style="border: 0.5px solid"></apex:column>
+    			</apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock >
+        	<h3>Terminos y condiciones</h3>
+        	<p>El transporte de Pasajeros y equipaje prestado por Aerovías del Continente Americano S.A. Air-Evolution; Taca International Airlines, S.A.; Avianca Costa Rica S.A.; Avianca Ecuador S.A. y Regional Express Américas S.A.S.
+            se encuentra sujeto a los siguientes términos y condiciones, en adición a los términos y condiciones impresas en cualquier tiquete o tiquete electrónico. Al comprar un boleto o aceptar el transporte, el Pasajero acepta estas disposiciones.</p>
+        	<div style="background-color: #af0c0c;">
+            	.
+        	</div>
+    	</apex:pageBlock>
+    </apex:form>
+</apex:page>

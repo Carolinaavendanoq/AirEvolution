@@ -200,4 +200,26 @@ public class obtainFlightsTest {
         }
     } 
     
+    @isTest
+    static void verifyContactThrowTest(){
+        String idType = 'Cédula de ciudadanía';
+        String idNumber = '1264865';
+       
+        Contact result = obtainFlights.verifyContact(idType, idNumber);
+      	System.assertEquals(null, result);
+    }
+    
+    @isTest
+    static void verifyReservationThrowTest(){
+        try{
+            String contactId = '13235fd32';
+        	Opportunity result = obtainFlights.verifyReservation(contactId);
+        }catch(exception e){
+            system.assert(e.getMessage().contains('exception'));
+        }
+
+      	
+    }
+    
+    
 }

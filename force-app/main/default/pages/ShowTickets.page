@@ -1,0 +1,18 @@
+<apex:page title="Búsqueda de tiquetes" controller="ShowTickets" tabStyle="OpportunityLineItem">
+    <apex:form >
+        <apex:pageBlock title="Buscar tiquetes por pasajero">
+            <apex:pageMessages />
+            <apex:pageBlockSection title="Buscar pasajero">
+                <apex:outputLabel for="identiType" value="Tipo de identificación"/>
+                <apex:selectList value="{!identiType}" size="1">
+                    <apex:selectOptions value="{!selectedItem}"></apex:selectOptions>
+                </apex:selectList>
+                <apex:outputLabel for="identityNumber" value="Número de identificación"/>
+                <apex:inputText value="{! identityNumber}" size="20"></apex:inputText>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{! getpdfTickets}" value="Buscar" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

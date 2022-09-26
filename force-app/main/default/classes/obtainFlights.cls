@@ -35,7 +35,8 @@ public with sharing class obtainFlights {
         
             return existingContact;
         } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
+            // throw new AuraHandledException(e.getMessage());
+            return null;
         }
     }
 
