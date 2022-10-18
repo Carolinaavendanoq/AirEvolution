@@ -1,5 +1,5 @@
 public class ClimaModel {
-    
+    // Recibe el mapa de mapas con el id del aeropuerto(llegada o partida), sus respectivas latitudes y longitudes, para extraerlas y hacer una llamada rest a la api de climas y obtener la temperatura de la ciudad del aeropuerto de llegada, para insertar estos climas
     public static void insertWeatherData(Map<Integer,Map<String, String>> values){
         try{
         	List<Clima__c> weathers = new List<Clima__c>();
@@ -28,7 +28,8 @@ public class ClimaModel {
         }
 
     }
-    
+
+    // Obtiene todos los vuelos que parten el día actual, para conseguir la latitud y la longitud del aeropuerto de partida de cada vuelo, almacenando estos valores junto con el id del aeropuerto de partida en un mapa de mapas 
     @future(callout=true)
     public  static void departureAirports(){
         try{
@@ -53,6 +54,7 @@ public class ClimaModel {
         }  
     }
     
+    // Obtiene los vuelos que parten el día actual cada hora, para conseguir la latitud y la longitud del aeropuerto de llegada de cada vuelo, almacenando estos valores junto con el id del aeropuerto de llegada en un mapa de mapas
     @future(callout=true)
     public static void arriveAirports(){
         try{

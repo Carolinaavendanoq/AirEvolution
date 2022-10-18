@@ -1,5 +1,5 @@
 public class AircraftMaintenance {
-    
+    // Envía notificación al rol "Gestión de vuelos", informándoles qué aviones requieren mantenimiento preventivo cada hora
     public static void preventiveMaintenance(){
         Datetime nowDate = Datetime.now();
         List<Product2> flights = [SELECT Id, Fecha_y_hora_de_partida__c, Avion__c FROM Product2 WHERE IsActive = true AND Fecha_y_hora_de_partida__c = TODAY];

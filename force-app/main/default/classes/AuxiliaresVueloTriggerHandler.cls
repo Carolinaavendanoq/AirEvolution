@@ -8,36 +8,44 @@ public without sharing class AuxiliaresVueloTriggerHandler implements TriggerHan
         this.triggerSize = triggerSize;
     }
 
+    // Método ejecutado antes de que se inserte un Auxiliar de Vuelo
     public void beforeInsert(List<Auxiliares_de_vuelo__c> newFlightAttendant){
-        // code
+        
         stopAllocation(newFlightAttendant);
     }
 
+    // Método ejecutado antes de que se actualice un Auxiliar de Vuelo
     public void beforeUpdate(List<Auxiliares_de_vuelo__c> oldFlightAttendants, List<Auxiliares_de_vuelo__c> newFlightAttendant, Map<ID, SObject> oldFlightAttendantMap, Map<ID, SObject> newFlightAttendantMap){
-        // code
+        
 
     }
 
+    // Método ejecutado antes de que se elimine un Auxiliar de Vuelo
     public void beforeDelete(List<Auxiliares_de_vuelo__c> oldFlightAttendants, Map<ID, SObject> oldFlightAttendantMap){
 
     }
 
+    // Método ejecutado después de que se inserte un Auxiliar de Vuelo
     public void afterInsert(List<Auxiliares_de_vuelo__c> newFlightAttendant, Map<ID, SObject> newFlightAttendantMap){
         
     }
 
+    // Método ejecutado después de que se actualice un Auxiliar de Vuelo
     public void afterUpdate(List<Auxiliares_de_vuelo__c> oldFlightAttendants, List<Auxiliares_de_vuelo__c> newFlightAttendant, Map<ID, SObject> oldFlightAttendantMap, Map<ID, SObject> newFlightAttendantMap){
         
     }
 
+    // Método ejecutado después de que se elimine un Auxiliar de Vuelo
     public void afterDelete(List<Auxiliares_de_vuelo__c> oldFlightAttendants, Map<ID, SObject> oldFlightAttendantMap){
         
     }
 
+    // Método ejecutado después de que se elimine un Auxiliar de Vuelo
     public void afterUndelete(List<Auxiliares_de_vuelo__c> newFlightAttendant, Map<ID, SObject> newFlightAttendantMap){
 
     }
 
+    // Realiza el conteo de auxiliares de vuelo agrupados por vuelo y los contrasta con el número de auxiliares requeridos de la aeronave para cada uno de esos vuelos. En el momento en que el número de auxilaires requeridos y asignados sea igual y se intente asignar otro tripulante, se mostrará un error en pantalla impidiendo que se inserte un nuevo auxiliar de vuelo
     public void stopAllocation(List<Auxiliares_de_vuelo__c> flightAttendantsNew){
         Set<Id> flightsId = new set<Id>();
         for (Auxiliares_de_vuelo__c flightAttendant : flightAttendantsNew) {

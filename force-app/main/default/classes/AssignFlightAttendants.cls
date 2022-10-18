@@ -7,6 +7,7 @@ public with sharing class AssignFlightAttendants implements Database.Batchable<s
         return Database.getQueryLocator(query);
     }
 
+    // Envía notificación a usuarios con rol "Gestión de vuelos" 7 días antes de la fecha de partida de un vuelo, para que asigne la tripulación requerida por vuelo
     public void execute(Database.BatchableContext bc, List<Product2> flights){
         List<Product2> assignFlights = new List<Product2>();
         Date flightDate;
