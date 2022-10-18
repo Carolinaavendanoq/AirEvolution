@@ -1,5 +1,7 @@
 @RestResource(urlMapping = '/Opportunity/*')
 global class OpportunityRest {
+
+    // Expone un servicio rest que recibirá los datos personales del cliente, su elección de vuelo y categoría (lista de precios). Crea un cliente en caso de que no exista y le asigna o actualiza una reserva, para finalmente crearle un tiquete
     @HttpPost
     global static WrapperToRest createBooking(String identityNumber, String identiType, String nameFirst,String nameLast, String  passportNumber, String birthofDate, String anEmail, String nationality, String priceBookId, String flightId){
         Contact verifyCustomer = new Contact();
@@ -57,6 +59,7 @@ global class OpportunityRest {
         
     }
     
+    // Expone un servicio rest que recibirá la confirmación del pago de una reserva desde un sitio externo. Una vez recibido el id de la reserva se actualizará su estado y enviará un email confirmando el pago
     @httpPatch
     global static String paidReservation(string bookingId){
         String message;

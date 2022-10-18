@@ -4,6 +4,7 @@ public class Ticket35Off implements Database.Batchable<sObject>{
         return Database.getQueryLocator(query);
     }
 
+    // Aplica un descuento del 35% a todos los valores de cada vuelo y sus respectivas categorías
     public void execute(Database.BatchableContext bc, List<PricebookEntry> pricebooks){
         Decimal discount;
         for(PricebookEntry pricebook: pricebooks){

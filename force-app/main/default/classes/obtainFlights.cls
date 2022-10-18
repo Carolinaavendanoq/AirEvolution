@@ -1,4 +1,6 @@
 public with sharing class obtainFlights {
+
+    // Obtiene los vuelos y sus precios de acuerdo a la categoría de lista de precio que se le da, retornando sólo aquellos vuelos con esa lista de precios, que estén activos y que su estado sea "En venta" o "Check in"
     @AuraEnabled(cacheable = true)
     public static List<Flight> getFlights(String pricebookId){
         try {
@@ -19,6 +21,7 @@ public with sharing class obtainFlights {
         }
     }
 
+    // Retorna las listas de precios activas
     @AuraEnabled(cacheable = true)
     public static List<Pricebook2> obtainPricebooks(){
         try {
@@ -28,6 +31,7 @@ public with sharing class obtainFlights {
         }
     }
 
+    // Verifica la existencia de un cliente dentro de la organización, determinándolo de acuerdo al tipo y número de identificación dados.
     @AuraEnabled
     public static Contact verifyContact(String idType, String idNumber ){
         try {
@@ -35,12 +39,11 @@ public with sharing class obtainFlights {
         
             return existingContact;
         } catch (Exception e) {
-            // throw new AuraHandledException(e.getMessage());
             return null;
         }
     }
 
-
+    // Comprobar si un cliente tiene reservas en estado "Pre-venta" o "Completado", en caso de no tener se inserta una nueva reserva teniendo como titular a este cliente
     @AuraEnabled
     public static Opportunity verifyReservation(String idContact){
         
@@ -63,6 +66,7 @@ public with sharing class obtainFlights {
 
     }
 
+    // Asigna una lista de precios a una reserva
     @AuraEnabled
     public static Opportunity updateReservation(String idReserve, String idPricebook2){
         try {
@@ -75,6 +79,7 @@ public with sharing class obtainFlights {
         }
     }
 
+    // Actualiza el estado de la reserva a "Completado"
     @AuraEnabled
     public static Opportunity finalBooking(String idReserve){
         try {
@@ -86,6 +91,7 @@ public with sharing class obtainFlights {
         }
     }
 
+    // Inserta tiquete, asignándole una reserva, un vuelo y un pasajero
     @AuraEnabled
     public static OpportunityLineItem createTicket(String bookingId, String flightId, String customerId){
         try {

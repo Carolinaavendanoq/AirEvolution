@@ -4,6 +4,7 @@ public with sharing class End35Off implements Database.Batchable<sObject>{
         return Database.getQueryLocator(query);
     }
 
+    // Quita el descuento del 35% a todas las categorias de viaje de cada vuelo activo 
     public void execute(Database.BatchableContext bc, List<PricebookEntry> pricebooks){
         Decimal withouthDiscount;
         for(PricebookEntry pricebook: pricebooks){

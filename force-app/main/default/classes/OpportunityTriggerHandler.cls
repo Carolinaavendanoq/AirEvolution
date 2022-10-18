@@ -39,6 +39,7 @@ public without sharing class OpportunityTriggerHandler implements TriggerHandler
 
     }
 
+    // Actualiza el nombre de la reserva asignándole el nombre del cliente que aparece como titular de la reserva más un número aleatorio
     public static void bookingName(List<Opportunity> opportunitiesNew){
         Set<Id> holdersId = new Set<Id>();
         for (Opportunity opportunityNew : opportunitiesNew) {
@@ -55,6 +56,7 @@ public without sharing class OpportunityTriggerHandler implements TriggerHandler
         }
     }
 
+    // Verifica si el estado de una reserva puede actualizarse y lo hace comprobando si la reserva tiene por lo menos un vuelo asignado
     public static void withoutFlight(List<Opportunity> opportunitiesNew){
         for(Opportunity booking : opportunitiesNew){
             if((booking.Numero_de_vuelos__c < 1 && booking.StageName == 'Pagado') || (booking.Numero_de_vuelos__c < 1 && booking.StageName == 'Completado')){
@@ -91,7 +93,7 @@ public without sharing class OpportunityTriggerHandler implements TriggerHandler
                 inspectResults(results);
             }            
         }
-    }
+    }  
     private static Boolean inspectResults(Messaging.SendEmailResult[] results) {
         Boolean sendResult = true;
         // sendEmail returns an array of result objects.

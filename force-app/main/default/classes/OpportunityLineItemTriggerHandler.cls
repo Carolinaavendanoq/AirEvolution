@@ -42,6 +42,7 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
 
     }
 
+    // Utiliza el cliente titular de la reserva para asignar un valor al campo de pasajero, de los tiquetes de esa reserva, si el campo está nulo
     public static void addPassenger(List<OpportunityLineItem> opportunityLineItemNeW){
         List<Opportunity> opportunities = new List<Opportunity>([SELECT Id,Titular_de_reserva__c FROM Opportunity WHERE StageName = 'Pre-venta']);
         for (Opportunity opportunity: opportunities){
@@ -53,6 +54,7 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
         }
     }
 
+    // Realiza el conteo de tiquetes vendidos hasta el momento para determinados vuelos. Luego, verifica el número total de pasajeros que admite la aeronave que realizará el vuelo. Si los tiquetes que se pretende vender supera el número de asientos disponibles por aeronave, entonces se muestra error que impide la sobreventa de asientos.
     public void oversell(List<OpportunityLineItem> opportunityLineItemNeW){
         
         set <Id> idFlights = new set<Id>();
@@ -84,6 +86,7 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
         }
     }
 
+    // Completa los campos de equipaje permitido y categoría de los tiquetes que pertenezcan a una reserva con lista de precios de "Clase negocio"
     public static void assignBusinessClass(List<OpportunityLineItem> opportunityLineItemNeW){
         Pricebook2 businessId = [SELECT Id FROM Pricebook2 WHERE Name = 'Clase negocio' LIMIT 1];
 
@@ -104,6 +107,7 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
         }
     }
 
+    // Asigna una fecha de partida a los tiquetes de acuerdo a la fecha y hora de partida del vuelo al que pertenecen
     public static void departureDate(List<OpportunityLineItem> opportunityLineItemsNeW){
         Set<Id> flightsId = new Set<Id>();
         for (OpportunityLineItem ticket : opportunityLineItemsNeW) {
@@ -117,14 +121,15 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
                 if (ticket.Product2Id == flight.Id) {
                     DateTime departureDatetime = flight.Fecha_y_hora_de_partida__c;
                     System.debug('Fecha y hora de partida ' + departureDatetime);
-                    Date travelDate = Date.newInstance(departureDatetime.year(), departureDatetime.month(), departureDatetime.day());System.debug('Fecha de viaje ' + travelDate);
+                    Date travelDate = Date.newInstance(departureDatetime.year(), departureDatetime.month(), departureDatetime.day());
+                    System.debug('Fecha de viaje ' + travelDate);
                     ticket.ServiceDate = travelDate;
                 }
             }
         }
     }
 
-
+    // Completa el campo de categoría de los tiquetes que pertenezcan a una reserva con lista de precios de "Turista". Además, ajusta el precio total del tiquete dependiendo del equipaje que se haya seleccionado
     public static void touristCategory(List<OpportunityLineItem> opportunityLineItemsNeW){
         Decimal allBaggage;
         Decimal personalCockpit;
@@ -172,6 +177,7 @@ public without sharing class OpportunityLineItemTriggerHandler implements Trigge
 
     }
 
+    // Completa el campo de categoría de los tiquetes que pertenezcan a una reserva con lista de precios de "Carga"
     public static void cargoCategory(List<OpportunityLineItem> opportunityLineItemsNeW){
         Set<Id> idFlights= new Set<Id>();
         for (OpportunityLineItem oli : opportunityLineItemsNeW){
