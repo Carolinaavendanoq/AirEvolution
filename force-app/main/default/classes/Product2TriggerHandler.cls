@@ -38,6 +38,7 @@ public without sharing class Product2TriggerHandler implements TriggerHandler {
 
     }
 
+    // Arroja un error si el estado de un vuelo es "cancelado" y no tiene un motivo de cancelación registrado. También actualiza el campo IsActive = false, si el estado del vuelo es "terminado" o "cancelado", en caso de ser cancelado actualiza la fecha de cancelación del vuelo
     public static void disableFlight(List<Product2> product2New){
         for (Product2 p2 : product2New) {
             if (p2.IsActive != false && (p2.Estado__c == 'Cancelado' || p2.Estado__c == 'Terminado')) {
@@ -52,6 +53,7 @@ public without sharing class Product2TriggerHandler implements TriggerHandler {
         }
     }
 
+    // Asigna un valor al campo número de vuelo, con formato AE + número aleatorio de 4 dígitos
     public static void flightNumber(List<Product2> product2New){
         for (Product2 flight : product2New) {
             if (flight.Name != null) {

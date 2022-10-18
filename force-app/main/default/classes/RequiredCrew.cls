@@ -1,4 +1,6 @@
 public class RequiredCrew {
+
+    // Consulta los vuelos cuya fecha de partida esté dentro de los próximos 7 días, con el número de auxiliares requeridos de la aeronave asignada a cada vuelo y los auxiliares de vuelo hasta el momento asignados
     @AuraEnabled(cacheable = true) 
     public static List<Flight> obtainFlights(){
         try {

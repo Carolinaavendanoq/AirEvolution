@@ -1,4 +1,5 @@
 public class PaidBooking {
+    // Envía un email al correo electrónico del titular de la reserva cuando ésta se ha verificado como pagada. El correo contiene un archivo adjunto de formato pdf con información de los tiquetes
      public static void sendEmail(Opportunity booking){    
         String[] emails = new list<String>();
         

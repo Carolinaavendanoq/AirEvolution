@@ -42,6 +42,7 @@ public class ShowTickets {
         this.identityNumber = identityNumber;
     }
     
+    // Retorna la opción seleccionada por el usuario: el tipo de identificación
     public List<SelectOption> getselectedItem(){
         List<SelectOption> options = new List<SelectOption>();
         options.add(new SelectOption('Cédula de ciudadanía', 'Cédula de ciudadanía'));
@@ -50,6 +51,7 @@ public class ShowTickets {
         return options;
     }
     
+    // Obtiene la información de los tiquetes pertenecientes a un cliente consultado a través de la entrada de usuario del tipo y número de identificación. Mostrando errores si no se ingresa un valor o el cliente no existe. Retorna una referencia a la página que mostrará el pdf con toda la información de los tiquetes
     public PageReference getpdfTickets(){
         
         PageReference result;
@@ -83,6 +85,7 @@ public class ShowTickets {
         
     }
 
+    // Retorna la lista de tiquetes obtenida de la entrada del usuario
    	public List<OpportunityLineItem> getResultsForPdf(){
         return tickets;
     }

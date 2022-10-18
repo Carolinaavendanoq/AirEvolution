@@ -1,5 +1,6 @@
 @RestResource(urlMapping = '/Product2/*')
 global class Product2Rest {
+    // Expone servicio rest que recibe una fecha de partida, una ciudad de partida y otra de llegada, para consultar y retornar los vuelos activos que cumplan con dichas especificaciones, además de los precios de acuerdo  a la categoría
     @HttpGet
     global static WrapperToRest getFlights(){
         List<Product2> flights;
